@@ -1,0 +1,197 @@
+/* Fuentes (Ejemplo: Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+/* Variables de color (opcional pero útil para consistencia) */
+:root {
+    --primary-color: #0D0D2B; /* Azul noche muy oscuro */
+    --secondary-color: #2A0D54; /* Morado oscuro */
+    --accent-color-1: #00C4FF; /* Azul neón */
+    --accent-color-2: #FF00E6; /* Rosa neón */
+    --text-color: #E0E0E0; /* Gris claro para texto */
+    --text-color-dark: #A0A0A0; /* Gris más oscuro para subtextos */
+    --card-bg: rgba(24, 26, 42, 0.8); /* Fondo de tarjeta semi-transparente */
+    --border-color: rgba(0, 196, 255, 0.3); /* Borde neón sutil */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding-top: 56px; /* Ajuste para la navbar fija */
+    overflow-x: hidden; /* Evitar scroll horizontal no deseado */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif; /* Fuente futurista para encabezados */
+    color: var(--accent-color-1);
+}
+
+/* --- Barra de Navegación --- */
+.navbar {
+    background-color: rgba(13, 13, 43, 0.85); /* Fondo semi-transparente */
+    backdrop-filter: blur(10px); /* Efecto cristal esmerilado (futurista) */
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar .navbar-brand {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8em;
+    color: var(--accent-color-1);
+    text-shadow: 0 0 5px var(--accent-color-1);
+}
+
+.navbar .nav-link {
+    color: var(--text-color);
+    margin-left: 15px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--accent-color-2);
+    text-shadow: 0 0 8px var(--accent-color-2);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background: linear-gradient(rgba(13, 13, 43, 0.7), rgba(13, 13, 43, 0.9)), url('file:///Volumes/ADATA%20UFD/ProyectosIA/PortafolioIA/img/Fondo.png') no-repeat center center/cover;
+    /* Reemplaza la URL con una imagen de fondo futurista o abstracta */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative; /* Para efectos de pseudo-elementos si se necesitan */
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    text-shadow: 0 0 10px var(--accent-color-1), 0 0 20px var(--accent-color-1);
+    margin-bottom: 20px;
+}
+
+.hero-section .lead {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+/* --- Botones Futuristas --- */
+.futuristic-button {
+    background-color: var(--accent-color-1);
+    border: 1px solid var(--accent-color-1);
+    color: var(--primary-color);
+    padding: 12px 30px;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px var(--accent-color-1), inset 0 0 5px rgba(255,255,255,0.3);
+}
+
+.futuristic-button:hover {
+    background-color: var(--accent-color-2);
+    border-color: var(--accent-color-2);
+    color: white;
+    box-shadow: 0 0 20px var(--accent-color-2), inset 0 0 10px rgba(255,255,255,0.5);
+    transform: translateY(-2px); /* Pequeño efecto de elevación */
+}
+
+.futuristic-button-outline {
+    border: 2px solid var(--accent-color-1);
+    color: var(--accent-color-1);
+    padding: 10px 25px;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+.futuristic-button-outline:hover {
+    background-color: var(--accent-color-1);
+    color: var(--primary-color);
+    box-shadow: 0 0 15px var(--accent-color-1);
+}
+
+
+/* --- Secciones Generales --- */
+section {
+    padding: 80px 0; /* Más padding para las secciones */
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    text-shadow: 0 0 8px var(--accent-color-1);
+}
+
+/* --- Sección Proyectos --- */
+.bg-light-custom {
+    background-color: var(--secondary-color); /* Un tono ligeramente diferente para variedad */
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Para que la imagen no se salga con el hover */
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* Efecto de elevación */
+    box-shadow: 0 10px 30px rgba(0, 196, 255, 0.3);
+}
+
+.project-card .card-img-top {
+    border-bottom: 1px solid var(--border-color);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .card-img-top {
+    opacity: 1;
+}
+
+.project-card .card-body {
+    padding: 25px;
+}
+
+.project-card .card-title {
+    color: var(--accent-color-2);
+    margin-bottom: 15px;
+}
+
+.project-card .card-text {
+    color: var(--text-color-dark);
+    font-size: 0.9rem;
+}
+
+/* --- Sección Contacto (Footer) --- */
+#contacto {
+    background-color: var(--primary-color); /* Mismo fondo que el body */
+    border-top: 1px solid var(--border-color);
+}
+
+#contacto h2 {
+    color: var(--accent-color-1);
+}
+
+.contact-icons .contact-icon {
+    font-size: 2.5rem; /* Tamaño de los iconos */
+    color: var(--text-color);
+    margin: 0 15px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.contact-icons .contact-icon:hover {
+    color: var(--accent-color-1);
+    text-shadow: 0 0 10px var(--accent-color-1);
+}
+
+#contacto p small {
+    color: var(--text-color-dark);
+}
