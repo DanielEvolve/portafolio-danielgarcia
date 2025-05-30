@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Hero Section --- */
 .hero-section {
-    background: linear-gradient(rgba(13, 13, 43, 0.7), rgba(13, 13, 43, 0.9)), url('file:///Volumes/ADATA%20UFD/ProyectosIA/PortafolioIA/img/Fondo.png') no-repeat center center/cover;
+    background: linear-gradient(rgba(13, 13, 43, 0.7), rgba(13, 13, 43, 0.9)), url('img/Fondo.png') no-repeat center center/cover;
     /* Reemplaza la URL con una imagen de fondo futurista o abstracta- */ 
     height: 100vh; /* Ocupa toda la altura de la ventana */
     display: flex;
