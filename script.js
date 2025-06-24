@@ -23,9 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Verifica si el elemento objetivo realmente existe en la página
             if (targetElement) {
-                // Calcula la posición a la que queremos desplazarnos.
-                // targetElement.offsetTop es la distancia desde la parte superior del documento
-                // hasta el inicio del elemento objetivo.
                 // Le restamos 56 píxeles (que es la altura aproximada de nuestra barra de navegación fija)
                 // para que la sección no quede oculta debajo de la barra al desplazarse.
                 const offsetTop = targetElement.offsetTop - 56;
